@@ -1,0 +1,145 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    padding: 20px;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    max-width: 550px;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(56, 189, 248, 0.15);
+    border-radius: 50%;
+    top: -80px;
+    right: -80px;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: rgba(168, 85, 247, 0.15);
+    border-radius: 50%;
+    bottom: -60px;
+    left: -60px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitulo{
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+select,
+input{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.07);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+/* CORRECCIÓN DEL MENÚ DESPLEGABLE */
+option{
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 10px;
+}
+
+select:focus,
+input:focus{
+    border-color: #38bdf8;
+    box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+input::placeholder{
+    color: #cbd5e1;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+}
+
+#resultado{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #facc15;
+    position: relative;
+    z-index: 2;
+}

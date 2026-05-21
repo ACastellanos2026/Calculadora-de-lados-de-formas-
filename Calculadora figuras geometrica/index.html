@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Áreas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Áreas</h1>
+        <p class="subtitulo">Calcula el área de figuras geométricas de manera rápida y elegante.</p>
+
+        <div class="card">
+            <label for="figura">Selecciona una figura:</label>
+
+            <select id="figura" onchange="mostrarCampos()">
+                <option value="">-- Elegir --</option>
+                <option value="circulo">Círculo</option>
+                <option value="triangulo">Triángulo</option>
+                <option value="rectangulo">Rectángulo</option>
+            </select>
+
+            <div id="campos"></div>
+
+            <button onclick="calcularArea()">Calcular Área</button>
+
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
